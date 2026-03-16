@@ -6,99 +6,93 @@ This project implements a complete machine learning system designed to predict w
 
 The system processes HR employee data and builds a classification model capable of identifying patterns associated with employee attrition. The final solution includes an API service, monitoring tools, a web interface, and automated workflows to ensure reproducibility and maintainability.
 
-Project Objectives
 
-The main objectives of this project are:
+------Project Objectives ------
 
-Build a machine learning model that predicts employee attrition.
+-The main objectives of this project are:
 
-Implement a structured ML pipeline for data preprocessing and model training.
+-Build a machine learning model that predicts employee attrition.
 
-Track experiments and model performance.
+-Implement a structured ML pipeline for data preprocessing and model training.
 
-Deploy the trained model through an API service.
+-Track experiments and model performance.
 
-Provide a simple user interface for predictions.
+-Deploy the trained model through an API service.
 
-Monitor system performance using industry monitoring tools.
+-Provide a simple user interface for predictions.
 
-Demonstrate CI/CD practices for automated testing and deployment.
+-Monitor system performance using industry monitoring tools.
 
-System Architecture
+-Demonstrate CI/CD practices for automated testing and deployment
+
+
+-----System Architecture------
 
 The system follows a modular architecture composed of several layers:
 
-Data Layer
+Data Layer:
+-HR dataset stored in a PostgreSQL cloud database.
 
-HR dataset stored in a PostgreSQL cloud database.
+-Data ingestion scripts upload the dataset into the database.
 
-Data ingestion scripts upload the dataset into the database.
+Machine Learning Layer:
 
-Machine Learning Layer
+-Data preprocessing and feature transformation pipeline.
 
-Data preprocessing and feature transformation pipeline.
+-Model training and evaluation.
 
-Model training and evaluation.
+Experiment Tracking :
 
-Experiment Tracking
+-Training experiments are logged for comparison and reproducibility.
 
-Training experiments are logged for comparison and reproducibility.
+API Layer:
 
-API Layer
+-Model served through a REST API.
 
-Model served through a REST API.
+Frontend Interface:
 
-Frontend Interface
+-Web application that allows users to input employee details and receive predictions.
 
-Web application that allows users to input employee details and receive predictions.
+Monitoring Layer:
 
-Monitoring Layer
+-API metrics and service performance tracked in real time.
 
-API metrics and service performance tracked in real time.
+Automation Layer:
 
-Automation Layer
+-CI/CD pipelines ensure testing and deployment automation.
 
-CI/CD pipelines ensure testing and deployment automation.
 
-Technologies Used
+-----Technologies Used-----
 
 This project integrates several technologies commonly used in production machine learning systems.
 
-Machine Learning
+Machine Learning:
+-scikit-learn
 
-scikit-learn
+Backend API:
+-FastAPI
 
-Backend API
+Frontend Dashboard:
+-Streamlit
 
-FastAPI
+Experiment Tracking:
+-Weights & Biases
 
-Frontend Dashboard
+Containerization:
+-Docker
 
-Streamlit
+Monitoring:
+-Prometheus
+-Grafana
 
-Experiment Tracking
+Database:
+-Neon PostgreSQL cloud database
 
-Weights & Biases
+CI/CD:
+-GitHub Actions
 
-Containerization
 
-Docker
-
-Monitoring
-
-Prometheus
-
-Grafana
-
-Database
-
-Neon PostgreSQL cloud database
-
-CI/CD
-
-GitHub Actions
-
-Project Structure
+-----Project Structure-----
 hr-attrition-mlops-pipeline
 
 data/
@@ -138,167 +132,190 @@ tests/
 README.md
 requirements.txt
 .env.example
-Machine Learning Pipeline
+
+
+----Machine Learning Pipeline-----
 
 The model development process consists of several steps:
 
-Data loading from the PostgreSQL database.
+-Data loading from the PostgreSQL database.
 
-Data cleaning and preprocessing.
+-Data cleaning and preprocessing.
 
-Handling missing values.
+-Handling missing values.
 
-Encoding categorical features.
+-Encoding categorical features.
 
-Scaling numerical features.
+-Scaling numerical features.
 
-Training a classification model.
+-Training a classification model.
 
-Hyperparameter tuning using cross-validation.
+-Hyperparameter tuning using cross-validation.
 
-Model evaluation using multiple performance metrics.
+-Model evaluation using multiple performance metrics.
 
-Model Evaluation Metrics
+
+-----Model Evaluation Metrics-----
 
 The trained model is evaluated using the following metrics:
+-Accuracy
 
-Accuracy
+-Precision
 
-Precision
+-Recall
 
-Recall
+-F1 Score
 
-F1 Score
+-ROC-AUC Score
 
-ROC-AUC Score
+-Precision-Recall analysis
 
-Precision-Recall analysis
-
-Confusion Matrix
+-Confusion Matrix
 
 These metrics help measure both overall performance and the model’s ability to correctly identify employees at risk of leaving.
 
-API Endpoints
+
+----API Endpoints----
 
 The model is exposed through a REST API.
 
-Health Check
-GET /health
+
+----Health Check-----
+
+GET /health.
 
 Returns service status.
 
-Prediction Endpoint
+
+----Prediction Endpoint----
+
 POST /predict
 
 Accepts employee information and returns the predicted attrition outcome along with probability scores.
 
-Streamlit Interface
 
-The Streamlit application provides a simple interface where users can:
 
-Enter employee attributes
+----Streamlit Interface---
 
-Submit the data to the prediction API
+-The Streamlit application provides a simple interface where users can:
 
-View the predicted attrition result
+-Enter employee attributes
 
-View probability of employee departure
+-Submit the data to the prediction API
+
+-View the predicted attrition result
+
+-View probability of employee departure
 
 This makes the model accessible to non-technical users.
 
-Monitoring and Metrics
+
+
+-----Monitoring and Metrics----
+
 
 Application monitoring is implemented to track system health and performance.
 
 Metrics collected include:
 
-API request count
+-API request count
 
-API response latency
+-API response latency
 
-Prediction requests
+-Prediction requests
 
-Service health status
+-Service health status
 
 Metrics are collected using Prometheus and visualized using Grafana dashboards.
 
-Testing
+
+
+----Testing----
+
 
 Unit tests are included to ensure system reliability.
 
 Test coverage includes:
 
-API endpoint functionality
+-API endpoint functionality
 
-Model prediction logic
 
-Input validation
+-Model prediction logic
 
-Error handling
+-Input validation
 
-Health check endpoint
+-Error handling
+
+-Health check endpoint
 
 Testing is implemented using the pytest framework.
 
-CI/CD Workflow
+
+----CI/CD Workflow-----
+
 
 Continuous integration and deployment are implemented using GitHub Actions.
 
 Automated workflows perform the following tasks:
 
-Code linting
+-Code linting
 
-Running unit tests
+-Running unit tests
 
-Building containers
+-Building containers
 
-Deploying backend and frontend services
+-Deploying backend and frontend services
 
 These workflows run automatically whenever new code is pushed to the main branch.
 
-Deployment
+
+----Deployment----
 
 The application is deployed using cloud hosting services.
 
 Deployment includes:
 
-FastAPI backend service
+-FastAPI backend service
 
-Streamlit frontend interface
+-Streamlit frontend interface
 
-Docker container environment
+-Docker container environment
 
 Both services can be accessed through public URLs once deployed.
 
-Business Value
 
-Employee turnover can have a significant impact on productivity and operational costs. By predicting potential employee attrition, organizations can take proactive measures to improve retention.
+------Business Value----
+
+Employee turnover can have a significant impact on productivity and operational costs. By 
+predicting potential employee attrition, organizations can take proactive measures to improve retention.
 
 Possible benefits include:
 
-Early identification of employees at risk of leaving
+-Early identification of employees at risk of leaving
 
-Improved workforce planning
+-Improved workforce planning
 
-Data-driven HR decision making
+-Data-driven HR decision making
 
-Reduced recruitment and training costs
+-Reduced recruitment and training costs
 
-Future Improvements
+
+----Future Improvements-----
 
 Potential improvements for this project include:
 
-Incorporating additional HR datasets
+-Incorporating additional HR datasets
 
-Adding explainable AI techniques for interpretability
+-Adding explainable AI techniques for interpretability
 
-Implementing automated retraining pipelines
+-Implementing automated retraining pipelines
 
-Adding role-based authentication for the API
+-Adding role-based authentication for the API
 
-Extending monitoring with alerting mechanisms
+-Extending monitoring with alerting mechanisms
 
-Author
+
+----Author----
 
 This project was developed as part of an academic machine learning and MLOps implementation to demonstrate real-world machine learning deployment practices.
 
