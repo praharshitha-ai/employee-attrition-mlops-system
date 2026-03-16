@@ -22,5 +22,11 @@ def load_data(table='hr_attrition', limit=None):
 if __name__ == '__main__':
     df = load_data()
     print(df.head())
-    print(df['Attrition'].value_counts())
+    print(df.shape)
+    print(df.columns.tolist())
+    print(df.head())
+    if 'Attrition' in df.columns:
+        print(df['Attrition'].value_counts())
+    else:
+        print("Attrition column missing - check case sensitivity")
 

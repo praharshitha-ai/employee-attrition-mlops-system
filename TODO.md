@@ -2,8 +2,8 @@
 
 # Overall Progress
 - [x] STEP 1 — Project Architecture & Structure ✅ (dirs, files, reqs, docker, workflows created)
-- [ ] STEP 2 — Data Layer (Neon PostgreSQL)
-- [ ] STEP 3 — Model Training & Pipeline
+- [x] STEP 2 — Data Layer (Neon PostgreSQL) ✅ (scripts ready, CSV fallback used)
+- [x] STEP 3 — Model Training & Pipeline ✅ (RF pipeline trained AUC 0.694, models saved)
 - [ ] STEP 4 — Hyperparameter Tuning
 - [ ] STEP 5 — Experiment Tracking (Weights & Biases)
 - [ ] STEP 6 — Model Registry & Artifacts
@@ -22,8 +22,8 @@
 
 **STEP 3:**
 - [x] EDA in src/data/eda.py (run it)
-- [ ] Preprocessing pipeline
-- [ ] Sklearn Pipeline (RF)
+- [x] Preprocessing pipeline
+- [x] Sklearn Pipeline (RF)
 
 WANDB_API_KEY saved to .env
 

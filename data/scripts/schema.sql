@@ -1,8 +1,8 @@
 -- Neon Postgres schema for HR Attrition (STEP 2)
 CREATE TABLE IF NOT EXISTS hr_attrition (
-    Age INTEGER,
-    Attrition VARCHAR(10),
-    BusinessTravel VARCHAR(20),
+    \"Age\" INTEGER,
+    \"Attrition\" VARCHAR(10),
+    \"BusinessTravel\" VARCHAR(20),
     DailyRate INTEGER,
     Department VARCHAR(20),
     DistanceFromHome INTEGER,

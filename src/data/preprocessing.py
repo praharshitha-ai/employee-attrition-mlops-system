@@ -3,7 +3,7 @@ import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.pipeline import Pipeline
-from sklearn.base import BaseEstimator, TransformerMixin
+
 
 def prepare_features(df):
     # Drop non-features
