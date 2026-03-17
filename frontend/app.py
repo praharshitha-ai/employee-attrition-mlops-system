@@ -7,7 +7,7 @@ from plotly.subplots import make_subplots
 import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from models.pipeline import get_pipeline
+from src.models.pipeline import get_pipeline
 
 st.set_page_config(page_title="HR Attrition Predictor", layout="wide")
 
