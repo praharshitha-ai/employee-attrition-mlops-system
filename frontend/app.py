@@ -5,8 +5,8 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import sys
-sys.path.append('src')
-
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from models.pipeline import get_pipeline
 
 st.set_page_config(page_title="HR Attrition Predictor", layout="wide")
@@ -16,8 +16,10 @@ st.set_page_config(page_title="HR Attrition Predictor", layout="wide")
 def load_model():
     try:
         model = joblib.load('models/attrition_pipeline.joblib')
+        st.info("✅ Model loaded successfully")
         return model
-    except:
+    except Exception as e:
+        st.error(f"❌ Model load failed: {str(e)}")
         return None
 
 model = load_model()
@@ -98,8 +100,8 @@ st.sidebar.markdown("Production-ready MLOps: EDA, tuned model, API, Docker, W&B,
 
 
 if st.sidebar.button("Train Baseline"):
-    sys.path.append('src')
-    from models.train import train_model
+    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    from src.models.train import train_model
     train_model()
     st.sidebar.success("Model trained!")
 

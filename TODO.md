@@ -10,7 +10,7 @@
 - [ ] STEP 7 — FastAPI Backend
 - [ ] STEP 8 — API Testing
 - [ ] STEP 9 — Containerization & Monitoring
-- [ ] STEP 10 — Streamlit Frontend
+- [x] STEP 10 — Streamlit Frontend ✅ (Fixed imports, model load, EDA/prediction working)
 - [ ] STEP 11 — Testing & Code Quality
 - [ ] STEP 12 — Version Control & CI/CD (GitHub: employee-attrition-mlops-system)
 - [ ] STEP 13 — Deployment (Render account: tea-d5tgrcvgi27c73f77cbg)
