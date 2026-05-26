@@ -16,7 +16,7 @@
 - [ ] STEP 13 — Deployment (Render account: tea-d5tgrcvgi27c73f77cbg)
 - [ ] STEP 14 — Documentation & Business Value
 
-## Detailed Substeps for Remaining
+# Detailed Substeps for Remaining
 **STEP 2:**
 - [x] Neon scripts ready (pending DB URL)
 
@@ -25,8 +25,8 @@
 - [x] Preprocessing pipeline
 - [x] Sklearn Pipeline (RF)
 
-WANDB_API_KEY saved to .env
-
-
-*Updated by BLACKBOXAI after each major step.*
+**STEP 7:**
+- [x] Add POST /predict endpoint that loads saved pipeline model and returns prediction + probability
+- [ ] Add request/response examples to docs
+- [ ] Add tests for /predict
 
